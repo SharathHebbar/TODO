@@ -1,3 +1,3 @@
 # TODO
- TODO list using Djangp
- https://todobyssh.herokuapp.com/
+- TODO list using Djang0
+- https://todobyssh.herokuapp.com/
