@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 import django_heroku
 import dj_database_url
@@ -76,7 +77,11 @@ WSGI_APPLICATION = 'todolist.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config()
+    # 'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',  # Use the appropriate database engine
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),  # Adjust the database name and path
+    }
 }
 
 
